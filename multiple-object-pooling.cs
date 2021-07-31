@@ -35,7 +35,7 @@ public class ObjectPooler : MonoBehaviour
             {
                 // Create GameObject
                 tmp = Instantiate(objectToPool[i]);
-                // Deactive it
+                // Deactivate it
                 tmp.SetActive(false);
                 // Add it to pooler
                 _objectPools[i].Add(tmp);
