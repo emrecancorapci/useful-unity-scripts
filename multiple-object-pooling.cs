@@ -24,11 +24,11 @@ public class ObjectPooler : MonoBehaviour
             _objectPools.Add(new List<GameObject>());
         }
         
-        // Fills poolers with GameObject
-        
+        /* Fills poolers with GameObject */
         // For every pooler in poolers list
         for (int i = 0; i < _objectPools.Count; i++)
         {
+            // Define a GameObject
             GameObject tmp;
             // For every pool
             for (int j = 0; j < amountToPool[i]; j++)
