@@ -8,7 +8,7 @@ public class Orbit : MonoBehaviour
 
     void Update () 
     {
-        Vector3 relativePos = (target.position + new Vector3(0, height, 0)) - transform.position;
+        Vector3 relativePos = target.position + (Vector3.Up * height) - transform.position;
         
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion current = transform.localRotation;
