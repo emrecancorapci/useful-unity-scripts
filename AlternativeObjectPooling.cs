@@ -1,4 +1,4 @@
-// Haven't tested yet
+// Hasn't tested yet
 
 using System.Collections.Generic;
 using UnityEngine;
