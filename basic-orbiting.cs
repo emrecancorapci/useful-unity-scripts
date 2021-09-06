@@ -6,15 +6,14 @@ public class Orbit : MonoBehaviour
     public float radius;
     public float height;
 
-    void Update () 
+    void FixedUpdate () 
     {
         Vector3 relativePos = target.position + (Vector3.Up * height) - transform.position;
         
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion current = transform.localRotation;
-
-        transform.localRotation = Quaternion.Slerp(current, rotation, Time.deltaTime);
         
-        transform.Translate(0, 0, radius * (3f/2) * Time.deltaTime);
+        transform.localRotation = Quaternion.Slerp(current, rotation, Time.deltaTime * speed);
+        transform.Translate(0, 0, radius * Mathf.PI * speed * Time.deltaTime / 2f);
     }
 }
