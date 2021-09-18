@@ -4,11 +4,12 @@ public class Orbit : MonoBehaviour
 {
     public Transform target;
     public float radius;
-    public float height;
+    public float speed;
+    public Vector3 offset;
 
     void FixedUpdate () 
     {
-        Vector3 relativePos = target.position + (Vector3.Up * height) - transform.position;
+        Vector3 relativePos = target.position - transform.position + offset;
         
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion current = transform.localRotation;
